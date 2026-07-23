@@ -20,21 +20,25 @@ addButton.addEventListener("click", function () {
     taskLabel.textContent = taskText;
 
     checkbox.addEventListener("change", function () {
+
         if (checkbox.checked) {
             taskLabel.style.textDecoration = "line-through";
         } else {
             taskLabel.style.textDecoration = "none";
         }
+
     });
-   const deleteButton = document.createElement("button");
+
+    const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
 
     deleteButton.addEventListener("click", function () {
         newTask.remove();
-
     });
+
     newTask.appendChild(checkbox);
     newTask.appendChild(taskLabel);
+    newTask.appendChild(deleteButton);
 
     taskList.appendChild(newTask);
 
