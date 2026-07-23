@@ -2,9 +2,7 @@ const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addButton");
 const taskList = document.getElementById("taskList");
 
-addButton.addEventListener("click", function () 
-                           
-   {
+addButton.addEventListener("click", function () {
 
     const taskText = taskInput.value;
 
@@ -15,7 +13,22 @@ addButton.addEventListener("click", function ()
 
     const newTask = document.createElement("li");
 
-    newTask.textContent = taskText;
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+
+    const taskLabel = document.createElement("span");
+    taskLabel.textContent = taskText;
+
+    checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+            taskLabel.style.textDecoration = "line-through";
+        } else {
+            taskLabel.style.textDecoration = "none";
+        }
+    });
+
+    newTask.appendChild(checkbox);
+    newTask.appendChild(taskLabel);
 
     taskList.appendChild(newTask);
 
