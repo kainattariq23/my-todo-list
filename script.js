@@ -2,8 +2,11 @@ const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addButton");
 const taskList = document.getElementById("taskList");
 
-// Load saved tasks when the page opens
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+function saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
 function displayTasks() {
 
@@ -58,12 +61,6 @@ function displayTasks() {
     });
 }
 
-function saveTasks() {
-
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-
-}
-
 addButton.addEventListener("click", function() {
 
     const taskText = taskInput.value;
@@ -81,11 +78,13 @@ addButton.addEventListener("click", function() {
     tasks.push(newTask);
 
     saveTasks();
+
     displayTasks();
 
     taskInput.value = "";
 
 });
 
+displayTasks();
 // Display saved tasks when page loads
 displayTasks();
