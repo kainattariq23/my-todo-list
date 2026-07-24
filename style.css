@@ -102,8 +102,9 @@ h1 {
     position: fixed;
     font-size: 45px;
     z-index: 1000;
+    cursor: pointer;
     animation: bunnyRoam 15s linear infinite;
-    pointer-events: none;
+}
 }
 
 @keyframes bunnyRoam {
