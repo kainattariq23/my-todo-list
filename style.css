@@ -98,3 +98,39 @@ h1 {
     accent-color: #d98bb5;
     cursor: pointer;
 }
+.bunny {
+    position: fixed;
+    font-size: 45px;
+    z-index: 1000;
+    animation: bunnyRoam 15s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes bunnyRoam {
+
+    0% {
+        left: 5%;
+        top: 5%;
+    }
+
+    25% {
+        left: 85%;
+        top: 5%;
+    }
+
+    50% {
+        left: 85%;
+        top: 85%;
+    }
+
+    75% {
+        left: 5%;
+        top: 85%;
+    }
+
+    100% {
+        left: 5%;
+        top: 5%;
+    }
+
+}
