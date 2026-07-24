@@ -88,3 +88,31 @@ addButton.addEventListener("click", function() {
 displayTasks();
 // Display saved tasks when page loads
 displayTasks();
+const bunny = document.getElementById("bunny");
+const message = document.getElementById("message");
+
+const encouragingMessages = [
+    "You can do it! Keep going! 💗",
+    "One task at a time, you've got this! 🌸",
+    "You're doing amazing! ✨",
+    "Believe in yourself! 🐰",
+    "Small steps still move you forward! 💕",
+    "You are capable of amazing things! 🌷",
+    "Keep going, you're closer than you think! 💖"
+];
+
+bunny.addEventListener("click", function() {
+
+    const randomIndex = Math.floor(
+        Math.random() * encouragingMessages.length
+    );
+
+    message.textContent = encouragingMessages[randomIndex];
+
+    message.style.display = "block";
+
+    setTimeout(function() {
+        message.style.display = "none";
+    }, 3000);
+
+});
