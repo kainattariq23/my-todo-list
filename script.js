@@ -116,3 +116,8 @@ bunny.addEventListener("click", function() {
     }, 3000);
 
 });
+const bunny = document.getElementById("bunny");
+
+bunny.addEventListener("click", function() {
+    alert("You can do it! Keep going! 💗");
+});
