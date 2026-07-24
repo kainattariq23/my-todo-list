@@ -1,58 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f2, #eee4ff);
     text-align: center;
     margin: 0;
-    padding: 50px;
+    padding: 50px 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 h1 {
-    color: #333;
-    margin-bottom: 30px;
+    color: #8e5a7a;
+    font-size: 40px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
 }
 
 #taskInput {
-    padding: 12px;
-    width: 250px;
+    padding: 13px 16px;
+    width: 280px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #f3b6d2;
+    border-radius: 25px;
+    outline: none;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+#taskInput:focus {
+    border-color: #d99ac0;
+    box-shadow: 0 0 8px rgba(217, 154, 192, 0.3);
 }
 
 #addButton {
-    padding: 12px 20px;
-    margin-left: 5px;
+    padding: 13px 22px;
+    margin-left: 8px;
     font-size: 16px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    background-color: #d98bb5;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#addButton:hover {
+    background-color: #c875a2;
+    transform: translateY(-2px);
 }
 
 #taskList {
     list-style: none;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 #taskList li {
-    background-color: white;
-    width: 400px;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 450px;
+    max-width: 90%;
+    margin: 12px auto;
+    padding: 15px 18px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    box-shadow: 0 5px 15px rgba(150, 100, 140, 0.12);
+    box-sizing: border-box;
 }
 
 #taskList li span {
     flex: 1;
     text-align: left;
+    color: #6f5366;
+    font-size: 16px;
 }
 
 #taskList li button {
-    padding: 7px 12px;
+    padding: 8px 14px;
     cursor: pointer;
     border: none;
-    border-radius: 4px;
+    border-radius: 18px;
+    background-color: #f2b6cc;
+    color: #6f3d55;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#taskList li button:hover {
+    background-color: #e89bb9;
+    transform: scale(1.05);
+}
+
+#taskList li input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #d98bb5;
+    cursor: pointer;
 }
